@@ -52,12 +52,6 @@
 
   <style>
     html, body { font-family: "Poppins", system-ui, sans-serif; }
-    .video-placeholder {
-      background:
-        radial-gradient(circle at 30% 20%, rgba(255, 132, 31, 0.15), transparent 50%),
-        radial-gradient(circle at 70% 80%, rgba(29, 45, 68, 0.25), transparent 50%),
-        #1D2D44;
-    }
     /* The animated dot-grid canvas sits in this container */
     .dot-grid-container { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
     .dot-grid-container canvas { display: block; width: 100%; height: 100%; }
@@ -127,43 +121,20 @@
         </p>
       </div>
 
-      <!-- Video container (placeholder for now -- swap iframe src when YouTube link is live) -->
+      <!-- YouTube video embed -->
       <div class="overflow-hidden rounded-2xl bg-brand-darkBlue p-2.5 shadow-lg">
-        <div class="relative aspect-video overflow-hidden rounded-xl video-placeholder">
-          <!-- When YouTube video is live, replace this entire div with:
-            <iframe class="h-full w-full" src="https://www.youtube.com/embed/VIDEO_ID" title="Your First Conversation with Claude" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          -->
-          <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-8">
-            <div class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-brand-orange/20 ring-4 ring-brand-orange/30">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-orange" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-            <p class="text-lg font-semibold">Walkthrough video dropping shortly</p>
-            <p class="mt-2 text-sm text-white/70 max-w-md">Pop your email below and I'll send it the second it goes live.</p>
-          </div>
+        <div class="relative aspect-video overflow-hidden rounded-xl bg-black">
+          <iframe
+            class="absolute inset-0 h-full w-full"
+            src="https://www.youtube.com/embed/dWgPuQIRnQ0"
+            title="Get Started with Claude — The Complete Beginner's Guide for Business"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
-
-      <!-- Email capture -->
-      <form id="notify-form" class="mt-8 mx-auto max-w-xl" action="REPLACE_WITH_FORMSPREE_ENDPOINT" method="POST">
-        <label for="email" class="sr-only">Email address</label>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="your@email.co.uk"
-            class="flex-1 rounded-[10px] border-2 border-brand-darkBlue10 bg-white px-4 py-3 text-brand-darkBlue placeholder-brand-darkBlue50 focus:border-brand-orange focus:outline-none"
-          />
-          <input type="hidden" name="_source" value="business-booster-2026-05-12" />
-          <button type="submit" class="inline-flex items-center justify-center rounded-[10px] bg-brand-orange px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-orangeHover">
-            Notify me
-          </button>
-        </div>
-        <p class="mt-3 text-xs text-brand-darkBlue50 text-center">No spam. One email when the video is live.</p>
-      </form>
     </div>
   </section>
 
@@ -216,17 +187,6 @@
       <p class="mt-7 text-xs text-white/50">&copy; 2026 Scott Mitchell &middot; Stepping Stones AI</p>
     </div>
   </footer>
-
-  <!-- Form fallback (when endpoint isn't configured yet) -->
-  <script>
-    document.getElementById("notify-form")?.addEventListener("submit", function (e) {
-      const action = e.target.getAttribute("action");
-      if (action === "REPLACE_WITH_FORMSPREE_ENDPOINT") {
-        e.preventDefault();
-        alert("Form endpoint not configured yet. Add a Formspree (or similar) URL to the form action attribute.");
-      }
-    });
-  </script>
 
   <!-- Animated dot grid (vanilla JS port of DotGrid.tsx from steppingstonesai.co.uk) -->
   <script>
