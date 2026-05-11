@@ -45,6 +45,15 @@
               orangeLight: "#FFF3E8",
             },
           },
+          keyframes: {
+            "scroll-logos": {
+              from: { transform: "translateX(0)" },
+              to: { transform: "translateX(-50%)" },
+            },
+          },
+          animation: {
+            "scroll-logos": "scroll-logos 36.9s linear infinite",
+          },
         },
       },
     };
@@ -59,17 +68,12 @@
 </head>
 <body class="bg-white text-brand-darkBlue antialiased">
 
-  <!-- Top nav -->
-  <header class="border-b border-brand-darkBlue10 bg-white">
-    <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-      <a href="/" class="flex items-center gap-3">
-        <img src="assets/ssai-logo-primary.png" alt="Stepping Stones AI" class="h-9 w-auto" />
-      </a>
-      <a href="#book" class="hidden sm:inline-flex items-center justify-center rounded-[10px] bg-brand-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-orangeHover">
-        Book a free chat
-      </a>
-    </div>
-  </header>
+  <!-- Reusable star icon (referenced 5x per testimonial card) -->
+  <svg width="0" height="0" style="position: absolute;" aria-hidden="true">
+    <symbol id="star" viewBox="0 0 20 20">
+      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+    </symbol>
+  </svg>
 
   <!-- Hero -->
   <section class="relative overflow-hidden px-4 pt-16 md:pt-24 pb-12 md:pb-16">
@@ -106,6 +110,66 @@
     </div>
   </section>
 
+  <!-- Logo strip -->
+  <section class="overflow-hidden bg-white pt-6 pb-4">
+    <div class="mb-3 text-center">
+      <p class="text-xs font-medium text-brand-darkBlue50">
+        Trusted by 40+ UK businesses
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Left edge fade -->
+      <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-white to-transparent"></div>
+      <!-- Right edge fade -->
+      <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white to-transparent"></div>
+
+      <!-- Scrolling track -->
+      <div class="flex w-max animate-scroll-logos will-change-transform">
+        <!-- First set -->
+        <div class="flex shrink-0 items-center gap-12 pr-12">
+          <img src="assets/logos/1.png" alt="Amass Digital" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/2.png" alt="Ride The Web" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/3.png" alt="RLS Forensic Assurance" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/4.png" alt="Not Just Travel" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/5.png" alt="Millstone Durbax" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/6.png" alt="HybridHR" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/7.png" alt="Freedom VAs" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/8.png" alt="Cannabark" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/9.png" alt="Beam Recruit" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/10.png" alt="Ametrine Coaching and Consultancy" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/11.png" alt="Ways to Wow" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/12.png" alt="E&amp;P Services" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/13.png" alt="The Cohen Consultancy" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/14.png" alt="Excel Accountants" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/15.png" alt="Blunt Spoons" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/16.png" alt="ConnexUs" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/17.png" alt="Girls on the Go" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+        </div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="flex shrink-0 items-center gap-12 pr-12" aria-hidden="true">
+          <img src="assets/logos/1.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/2.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/3.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/4.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/5.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/6.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/7.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/8.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/9.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/10.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/11.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/12.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/13.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/14.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/15.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/16.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+          <img src="assets/logos/17.png" alt="" class="h-[88px] w-auto shrink-0 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Video walkthrough -->
   <section id="video" class="bg-white px-4 py-16 md:py-20">
     <div class="mx-auto max-w-4xl">
@@ -132,6 +196,114 @@
             allowfullscreen
           ></iframe>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-brand-offWhite px-4 py-16 md:py-20">
+    <div class="mx-auto max-w-[1020px]">
+
+      <!-- Header -->
+      <div class="mb-10 text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-brand-orange">Testimonials</p>
+        <h2 class="text-3xl font-bold text-brand-darkBlue md:text-4xl">
+          You're in good company.
+        </h2>
+      </div>
+
+      <!-- 3-card grid: text | video | text -->
+      <div class="grid grid-cols-1 items-start gap-5 lg:grid-cols-3">
+
+        <!-- Left: Irene Afful (text) -->
+        <div class="overflow-hidden rounded-2xl border border-[#E8ECF0] bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(29,45,68,0.08)]">
+          <div class="p-7">
+            <div class="mb-3.5 flex items-center gap-3.5">
+              <img src="assets/testimonials/irene.jpeg" alt="Irene Afful" width="48" height="48" loading="lazy" class="rounded-full object-cover" style="width: 48px; height: 48px;" />
+              <div>
+                <h3 class="text-[15px] font-bold leading-tight text-brand-darkBlue">Irene Afful</h3>
+                <p class="text-[11.5px] font-medium text-[#5A6A7A]">CEO &amp; Founder of Ametrine Consultancy</p>
+                <div class="mt-px flex gap-0 text-amber-400">
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="text-[14.5px] leading-[1.72] text-[#5A6A7A]">
+              I was introduced to Scott through a business network colleague and had the opportunity to take part in 1-1 AI training with him. As an absolute AI-phobe and having little to no knowledge of using AI for my business, the sessions with Scott transformed my thinking. He really helped give me clarity on how to use AI and all the great features. He helped me navigate all the different ways AI can help with research, training and daily tasks. He has real in-depth knowledge of all things AI. It was a really informative experience and I have my AI bible to refer back to. I am now using AI daily to support me in my business. Thank you Scott!
+            </p>
+          </div>
+        </div>
+
+        <!-- Middle: Matty Maloney (video) -->
+        <div class="overflow-hidden rounded-2xl border border-[#E8ECF0] bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(29,45,68,0.08)]">
+          <div class="p-7 pb-0">
+            <div class="mb-3.5 flex items-center gap-3.5">
+              <img src="assets/testimonials/matty-maloney.jpg" alt="Matty Maloney" width="48" height="48" loading="lazy" class="rounded-full object-cover" style="width: 48px; height: 48px;" />
+              <div>
+                <h3 class="text-[15px] font-bold leading-tight text-brand-darkBlue">Matty Maloney</h3>
+                <p class="text-[11.5px] font-medium text-[#5A6A7A]">CEO &amp; Founder of AI Healthician</p>
+                <div class="mt-px flex gap-0 text-amber-400">
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="video-testimonial-tile" class="relative aspect-[9/10] w-full cursor-pointer overflow-hidden bg-brand-darkBlue">
+            <video
+              id="video-testimonial-player"
+              class="h-full w-full object-cover"
+              poster="assets/videos/matthew-poster.jpg"
+              preload="none"
+              playsinline
+            >
+              <source src="assets/videos/matthew.mp4" type="video/mp4" />
+            </video>
+            <!-- Orange gradient overlay -->
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-[rgba(255,132,31,0.12)] to-transparent"></div>
+            <!-- Play button overlay -->
+            <div id="video-testimonial-play" class="absolute inset-0 flex items-center justify-center">
+              <div class="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white/95 shadow-[0_4px_24px_rgba(0,0,0,0.25)]">
+                <div style="width: 0; height: 0; margin-left: 6px; border-style: solid; border-width: 11px 0 11px 20px; border-color: transparent transparent transparent #1D2D44;"></div>
+              </div>
+            </div>
+            <!-- Error fallback (hidden by default) -->
+            <div id="video-testimonial-error" class="absolute inset-0 hidden items-center justify-center">
+              <p class="rounded-lg bg-white/90 px-4 py-2 text-sm font-medium text-[#5A6A7A]">Video unavailable</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Jack Brennan (text) -->
+        <div class="overflow-hidden rounded-2xl border border-[#E8ECF0] bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(29,45,68,0.08)]">
+          <div class="p-7">
+            <div class="mb-3.5 flex items-center gap-3.5">
+              <img src="assets/testimonials/jack-brennan.png" alt="Jack Brennan" width="48" height="48" loading="lazy" class="rounded-full object-cover" style="width: 48px; height: 48px;" />
+              <div>
+                <h3 class="text-[15px] font-bold leading-tight text-brand-darkBlue">Jack Brennan</h3>
+                <p class="text-[11.5px] font-medium text-[#5A6A7A]">CEO &amp; Founder of Green Lane Brands</p>
+                <div class="mt-px flex gap-0 text-amber-400">
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                  <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
+                </div>
+              </div>
+            </div>
+            <p class="text-[14.5px] leading-[1.72] text-[#5A6A7A]">
+              I recently had the pleasure of training with Scott Mitchell from Stepping Stones AI, and I was genuinely impressed. The sessions were packed with valuable insights and practical knowledge on how to leverage ChatGPT and other AI tools to elevate my business. Scott delivered a deep dive into the different ChatGPT models, their capabilities, and how they can be effectively used across various areas of business. He explained complex topics in a way that was easy to understand and immediately actionable. His approach was not only informative but also incredibly supportive, giving me both the confidence and the tools to start applying AI more effectively. I highly recommend Scott to anyone looking to harness the power of AI to grow and streamline their business.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -332,6 +504,44 @@
     io.observe(container);
 
     raf = requestAnimationFrame(animate);
+  })();
+  </script>
+
+  <!-- Video testimonial click-to-play -->
+  <script>
+  (function () {
+    const tile = document.getElementById("video-testimonial-tile");
+    const video = document.getElementById("video-testimonial-player");
+    const playOverlay = document.getElementById("video-testimonial-play");
+    const errorOverlay = document.getElementById("video-testimonial-error");
+    if (!tile || !video || !playOverlay || !errorOverlay) return;
+
+    tile.addEventListener("click", () => {
+      if (video.paused) {
+        const result = video.play();
+        if (result && typeof result.catch === "function") {
+          result.catch(() => {
+            playOverlay.classList.add("hidden");
+            errorOverlay.classList.remove("hidden");
+            errorOverlay.classList.add("flex");
+          });
+        }
+        playOverlay.classList.add("hidden");
+      } else {
+        video.pause();
+        playOverlay.classList.remove("hidden");
+      }
+    });
+
+    video.addEventListener("ended", () => {
+      playOverlay.classList.remove("hidden");
+    });
+
+    video.addEventListener("error", () => {
+      playOverlay.classList.add("hidden");
+      errorOverlay.classList.remove("hidden");
+      errorOverlay.classList.add("flex");
+    });
   })();
   </script>
 </body>
