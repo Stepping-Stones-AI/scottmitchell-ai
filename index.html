@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scott Mitchell — Your First Conversation with Claude</title>
-  <meta name="description" content="The free walkthrough and booking page for Business Booster attendees. Watch the YouTube guide or book a free alignment call with Scott." />
+  <title>Scott Mitchell — Your Next Steps to More Brain Space and Time</title>
+  <meta name="description" content="The free walkthrough and booking page for Business Booster attendees. Watch the YouTube guide or book a free chat with Scott." />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Scott Mitchell — Your First Conversation with Claude" />
+  <meta property="og:title" content="Scott Mitchell — Your Next Steps to More Brain Space and Time" />
   <meta property="og:description" content="The free walkthrough for Business Booster attendees. Watch the guide. Book a free chat." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
@@ -55,8 +55,6 @@
     /* The animated dot-grid canvas sits in this container */
     .dot-grid-container { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
     .dot-grid-container canvas { display: block; width: 100%; height: 100%; }
-    /* Re-enable pointer events on the canvas itself so mouse-tracking works */
-    #dot-grid-canvas { pointer-events: auto; }
   </style>
 </head>
 <body class="bg-white text-brand-darkBlue antialiased">
@@ -89,8 +87,8 @@
       </div>
 
       <h1 class="text-[2rem] font-extrabold leading-tight md:text-[3rem]">
-        <span class="block text-brand-darkBlue">Your first conversation</span>
-        <span class="block text-brand-orange">with Claude starts here.</span>
+        <span class="block text-brand-darkBlue">Your next steps to more</span>
+        <span class="block text-brand-orange">brain space and time.</span>
       </h1>
 
       <p class="mt-6 max-w-xl text-base md:text-lg text-brand-darkBlue70 leading-relaxed">
@@ -203,6 +201,10 @@
     const canvas = document.getElementById("dot-grid-canvas");
     if (!canvas) return;
     const container = canvas.parentElement;
+    // Track the mouse across the whole hero section, even when the cursor is
+    // over the heading or buttons (they sit above the canvas in stacking order
+    // and would otherwise swallow the mousemove events).
+    const trackingTarget = container.closest("section") || container;
     const ctx = canvas.getContext("2d");
 
     let dots = [];
@@ -316,11 +318,11 @@
     ro.observe(container);
 
     if (!isTouch) {
-      container.addEventListener("mousemove", (e) => {
+      trackingTarget.addEventListener("mousemove", (e) => {
         const rect = container.getBoundingClientRect();
         mouse = { x: e.clientX - rect.left, y: e.clientY - rect.top };
       });
-      container.addEventListener("mouseleave", () => { mouse = null; });
+      trackingTarget.addEventListener("mouseleave", () => { mouse = null; });
     }
 
     const io = new IntersectionObserver(
