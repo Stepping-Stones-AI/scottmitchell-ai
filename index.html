@@ -212,17 +212,17 @@
         </h2>
       </div>
 
-      <!-- 3-card grid: text | video | text -->
-      <div class="grid grid-cols-1 items-start gap-5 lg:grid-cols-3">
+      <!-- 3-card grid: text | video | text (text cards center vertically next to taller video) -->
+      <div class="grid grid-cols-1 items-center gap-5 lg:grid-cols-3">
 
         <!-- Left: Irene Afful (text) -->
-        <div class="overflow-hidden rounded-2xl border border-[#E8ECF0] bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(29,45,68,0.08)]">
+        <div data-testimonial-card class="overflow-hidden rounded-2xl border border-[#E8ECF0] bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(29,45,68,0.08)]">
           <div class="p-7">
             <div class="mb-3.5 flex items-center gap-3.5">
-              <img src="assets/testimonials/irene.jpeg" alt="Irene Afful" width="48" height="48" loading="lazy" class="rounded-full object-cover" style="width: 48px; height: 48px;" />
+              <img data-testimonial-avatar src="assets/testimonials/irene.jpeg" alt="Irene Afful" width="48" height="48" loading="lazy" class="rounded-full object-cover" style="width: 48px; height: 48px;" />
               <div>
-                <h3 class="text-[15px] font-bold leading-tight text-brand-darkBlue">Irene Afful</h3>
-                <p class="text-[11.5px] font-medium text-[#5A6A7A]">CEO &amp; Founder of Ametrine Consultancy</p>
+                <h3 data-testimonial-name class="text-[15px] font-bold leading-tight text-brand-darkBlue">Irene Afful</h3>
+                <p data-testimonial-role class="text-[11.5px] font-medium text-[#5A6A7A]">CEO &amp; Founder of Ametrine Consultancy</p>
                 <div class="mt-px flex gap-0 text-amber-400">
                   <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
                   <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
@@ -232,9 +232,14 @@
                 </div>
               </div>
             </div>
-            <p class="text-[14.5px] leading-[1.72] text-[#5A6A7A]">
-              I was introduced to Scott through a business network colleague and had the opportunity to take part in 1-1 AI training with him. As an absolute AI-phobe and having little to no knowledge of using AI for my business, the sessions with Scott transformed my thinking. He really helped give me clarity on how to use AI and all the great features. He helped me navigate all the different ways AI can help with research, training and daily tasks. He has real in-depth knowledge of all things AI. It was a really informative experience and I have my AI bible to refer back to. I am now using AI daily to support me in my business. Thank you Scott!
-            </p>
+            <div class="text-[14.5px] leading-[1.72] text-[#5A6A7A]">
+              <p data-testimonial-text class="line-clamp-4">
+                I was introduced to Scott through a business network colleague and had the opportunity to take part in 1-1 AI training with him. As an absolute AI-phobe and having little to no knowledge of using AI for my business, the sessions with Scott transformed my thinking. He really helped give me clarity on how to use AI and all the great features. He helped me navigate all the different ways AI can help with research, training and daily tasks. He has real in-depth knowledge of all things AI. It was a really informative experience and I have my AI bible to refer back to. I am now using AI daily to support me in my business. Thank you Scott!
+              </p>
+              <button type="button" data-testimonial-trigger class="mt-2.5 text-[13px] font-semibold text-brand-orange hover:opacity-75">
+                Read more
+              </button>
+            </div>
           </div>
         </div>
 
@@ -282,13 +287,13 @@
         </div>
 
         <!-- Right: Jack Brennan (text) -->
-        <div class="overflow-hidden rounded-2xl border border-[#E8ECF0] bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(29,45,68,0.08)]">
+        <div data-testimonial-card class="overflow-hidden rounded-2xl border border-[#E8ECF0] bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(29,45,68,0.08)]">
           <div class="p-7">
             <div class="mb-3.5 flex items-center gap-3.5">
-              <img src="assets/testimonials/jack-brennan.png" alt="Jack Brennan" width="48" height="48" loading="lazy" class="rounded-full object-cover" style="width: 48px; height: 48px;" />
+              <img data-testimonial-avatar src="assets/testimonials/jack-brennan.png" alt="Jack Brennan" width="48" height="48" loading="lazy" class="rounded-full object-cover" style="width: 48px; height: 48px;" />
               <div>
-                <h3 class="text-[15px] font-bold leading-tight text-brand-darkBlue">Jack Brennan</h3>
-                <p class="text-[11.5px] font-medium text-[#5A6A7A]">CEO &amp; Founder of Green Lane Brands</p>
+                <h3 data-testimonial-name class="text-[15px] font-bold leading-tight text-brand-darkBlue">Jack Brennan</h3>
+                <p data-testimonial-role class="text-[11.5px] font-medium text-[#5A6A7A]">CEO &amp; Founder of Green Lane Brands</p>
                 <div class="mt-px flex gap-0 text-amber-400">
                   <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
                   <svg class="h-[14px] w-[14px]" fill="currentColor"><use href="#star"/></svg>
@@ -298,12 +303,42 @@
                 </div>
               </div>
             </div>
-            <p class="text-[14.5px] leading-[1.72] text-[#5A6A7A]">
-              I recently had the pleasure of training with Scott Mitchell from Stepping Stones AI, and I was genuinely impressed. The sessions were packed with valuable insights and practical knowledge on how to leverage ChatGPT and other AI tools to elevate my business. Scott delivered a deep dive into the different ChatGPT models, their capabilities, and how they can be effectively used across various areas of business. He explained complex topics in a way that was easy to understand and immediately actionable. His approach was not only informative but also incredibly supportive, giving me both the confidence and the tools to start applying AI more effectively. I highly recommend Scott to anyone looking to harness the power of AI to grow and streamline their business.
-            </p>
+            <div class="text-[14.5px] leading-[1.72] text-[#5A6A7A]">
+              <p data-testimonial-text class="line-clamp-4">
+                I recently had the pleasure of training with Scott Mitchell from Stepping Stones AI, and I was genuinely impressed. The sessions were packed with valuable insights and practical knowledge on how to leverage ChatGPT and other AI tools to elevate my business. Scott delivered a deep dive into the different ChatGPT models, their capabilities, and how they can be effectively used across various areas of business. He explained complex topics in a way that was easy to understand and immediately actionable. His approach was not only informative but also incredibly supportive, giving me both the confidence and the tools to start applying AI more effectively. I highly recommend Scott to anyone looking to harness the power of AI to grow and streamline their business.
+              </p>
+              <button type="button" data-testimonial-trigger class="mt-2.5 text-[13px] font-semibold text-brand-orange hover:opacity-75">
+                Read more
+              </button>
+            </div>
           </div>
         </div>
 
+      </div>
+    </div>
+
+    <!-- Testimonial "Read more" modal (shared by both text cards) -->
+    <div id="testimonial-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center">
+      <!-- Backdrop -->
+      <div data-modal-close class="absolute inset-0 bg-[rgba(29,45,68,0.45)] backdrop-blur-[4px]"></div>
+      <!-- Modal panel -->
+      <div role="dialog" aria-modal="true" aria-labelledby="modal-name" class="relative mx-4 w-full max-w-[680px] rounded-[20px] bg-white p-8 shadow-[0_20px_60px_rgba(29,45,68,0.18)] md:px-[52px] md:py-11">
+        <button type="button" data-modal-close aria-label="Close" class="absolute right-5 top-4 text-[28px] leading-none text-[#5A6A7A] hover:text-brand-darkBlue">&times;</button>
+        <div class="mb-3.5 flex items-center gap-4">
+          <img id="modal-avatar" src="" alt="" width="54" height="54" class="rounded-full object-cover" style="width: 54px; height: 54px;" />
+          <div>
+            <h3 id="modal-name" class="text-lg font-bold text-brand-darkBlue"></h3>
+            <p id="modal-role" class="mt-0.5 text-[13.5px] font-medium text-[#5A6A7A]"></p>
+          </div>
+        </div>
+        <div class="mb-5 flex gap-[3px] text-amber-400">
+          <svg class="h-[18px] w-[18px]" fill="currentColor"><use href="#star"/></svg>
+          <svg class="h-[18px] w-[18px]" fill="currentColor"><use href="#star"/></svg>
+          <svg class="h-[18px] w-[18px]" fill="currentColor"><use href="#star"/></svg>
+          <svg class="h-[18px] w-[18px]" fill="currentColor"><use href="#star"/></svg>
+          <svg class="h-[18px] w-[18px]" fill="currentColor"><use href="#star"/></svg>
+        </div>
+        <p id="modal-text" class="text-base leading-[1.8] text-[#5A6A7A]"></p>
       </div>
     </div>
   </section>
@@ -541,6 +576,60 @@
       playOverlay.classList.add("hidden");
       errorOverlay.classList.remove("hidden");
       errorOverlay.classList.add("flex");
+    });
+  })();
+  </script>
+
+  <!-- Testimonial "Read more" modal driver -->
+  <script>
+  (function () {
+    const modal = document.getElementById("testimonial-modal");
+    const modalAvatar = document.getElementById("modal-avatar");
+    const modalName = document.getElementById("modal-name");
+    const modalRole = document.getElementById("modal-role");
+    const modalText = document.getElementById("modal-text");
+    const triggers = document.querySelectorAll("[data-testimonial-trigger]");
+    if (!modal || triggers.length === 0) return;
+
+    function openModal(card) {
+      const avatar = card.querySelector("[data-testimonial-avatar]");
+      const name = card.querySelector("[data-testimonial-name]");
+      const role = card.querySelector("[data-testimonial-role]");
+      const text = card.querySelector("[data-testimonial-text]");
+      if (!avatar || !name || !role || !text) return;
+
+      modalAvatar.src = avatar.src;
+      modalAvatar.alt = avatar.alt;
+      modalName.textContent = name.textContent.trim();
+      modalRole.innerHTML = role.innerHTML; // preserves &amp; entity
+      modalText.textContent = text.textContent.trim();
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "";
+    }
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const card = trigger.closest("[data-testimonial-card]");
+        if (card) openModal(card);
+      });
+    });
+
+    modal.querySelectorAll("[data-modal-close]").forEach((el) => {
+      el.addEventListener("click", closeModal);
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModal();
+      }
     });
   })();
   </script>
