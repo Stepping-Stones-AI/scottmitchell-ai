@@ -61,6 +61,11 @@
 
   <style>
     html, body { font-family: "Poppins", system-ui, sans-serif; }
+    /* Smooth anchor-link scrolling for the hero CTAs (and any future in-page jumps).
+       Guarded so users who have set "reduce motion" at OS level still get instant jumps. */
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
     /* The animated dot-grid canvas sits in this container */
     .dot-grid-container { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
     .dot-grid-container canvas { display: block; width: 100%; height: 100%; }
